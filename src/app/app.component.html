@@ -1,0 +1,24 @@
+<div class = "container-fluid">
+  <div class = "row">
+    <div class = "col-2"></div>
+    <div class = "col-8">
+
+      <app-formulario-seccion (rescate) = "guardarSeccion($event)"></app-formulario-seccion>
+
+      <br><hr style = "color: red;">
+      <app-lista-seccion [seccion]= "listaSeccion"></app-lista-seccion>
+      <app-formulario-alumno
+        [dataEntrante]="detalleSeccion"
+        *ngFor = "let detalleSeccion of listaSeccion"
+        (rescateAlumno) = "guardarAlumno($event)"
+        ></app-formulario-alumno>
+
+      <br><hr>
+
+      <h1>Lista de Alumnos</h1>
+      <app-lista-alumnos [alumnos] = "ListaAlumnos" ></app-lista-alumnos>
+
+    </div>
+    <div class = "col-2"></div>
+  </div>
+</div>

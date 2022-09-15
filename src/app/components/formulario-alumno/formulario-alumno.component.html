@@ -1,0 +1,29 @@
+
+
+<h1>Crea a tu alumno</h1>
+<br><hr>
+<label for="">Rut</label>
+<input [value]="alumno.rut" (input) = "guardarRut($event)"type="text" placeholder="Rut del alumno">
+<br><hr>
+<label for="">Nombre</label>
+<input  type="text" (input) = "guardarNombre($event)" placeholder="Nombre del alumno">
+<br><hr>
+<label for="">Apellido</label>
+<input type="text" (input)= "guardarApellido($event)" placeholder="Apellido del alumno">
+<br><hr>
+<label for="">Edad</label>
+<input type="text" (input)= "guardarEdad($event)" placeholder="Edad del alumno">
+<br><hr>
+<label>Seccion</label>
+<select >
+  <option
+  [value]="seccion"
+  *ngFor = "let seccion from data "
+  (change) = "guardarSeccionAlumno($event)">
+  {{seccion.id}}
+  </option>
+
+</select>
+
+<br><hr>
+<button (click) = "GuardarTodo()"class = "btn btn-primary">Guardar</button>

@@ -1,0 +1,11 @@
+<h1>Crea tu seccion</h1>
+<br>
+<label for="">Id Seccion : </label>
+<input [value] = "seccion.id" (input) = "guardarid($event)" type="text" placeholder = "Ingresa la id de la seccion">
+<br><hr>
+<label for="">Nombre de la seccion : </label>
+<input [value] = "seccion.seccion" (input) = "guardarSeccion($event)" type="text" placeholder = "Ingresa el nombre de la seccion">
+<br><hr>
+<button (click)= "SaveAll()" class = "btn btn-primary">Guardar</button>
+
+
